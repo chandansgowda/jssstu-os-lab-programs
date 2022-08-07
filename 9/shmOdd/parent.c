@@ -7,34 +7,22 @@
 
 void main(){
 	
-	pid_t child_pid, wait_pid;
 	int n,i,shmid;
 	int *shared_memory;
 	
 	printf("Enter n>> ");
 	scanf("%d", &n);
+	char nstr[20];
+	sprintf(nstr, "%d", n);
 	
 	shmid = shmget((key_t)110011,1024,0666|IPC_CREAT);
 	shared_memory = (int*)shmat(shmid,NULL,0);
 	
-	child_pid = fork();
-	
-	if (child_pid<0){
-		printf("Child creation failed!\n");
-		exit(0);
-	}	
-	
-	if (child_pid==0){
-		int j=0;
-		for(i=1;i<2*n;i++){
-			if (i%2!=0){
-				shared_memory[j] = i;
-				j++;
-			}
-		}
+	if (fork()==0){
+		execlp("./child","child",nstr,NULL);
 	}
 	else{
-		wait_pid = wait(NULL);
+		wait(NULL);
 		for(i=0;i<n;i++){
 			printf("%d ",shared_memory[i]);
 		}
