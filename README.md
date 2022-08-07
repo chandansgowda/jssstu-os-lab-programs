@@ -1,6 +1,6 @@
 # Operating System Lab - JSSSTU (updated)
 
-## Left over programs (Round Robin, Producer-Consumer, Reader-Writer) will be added soon..
+## Left over programs (Producer-Consumer, Reader-Writer) will be added soon..
 
 OS LAB TEST PROGRAMS
 NOTE: For all the scheduling algorithms write the expected output for the given data (table with set

@@ -75,21 +75,21 @@ void main(){
 	}
 	
 	printf("\nGhant Chart\n");
-	for(i=0;i<n;i++)
+	for(i=0;i<len;i++)
 		printf("-------");
 	printf("\n");
-	for(i=0;i<n;i++){
+	for(i=0;i<len;i++){
 		if (pid[i]!=-1)
 			printf("  P%d  |", pid[i]);
 		else
 			printf(" IDLE |");
 	}
 	printf("\n");
-	for(i=0;i<n;i++)
+	for(i=0;i<len;i++)
 		printf("-------");
 	printf("\n");
 	printf("0      ");
-	for(i=0;i<n;i++)
+	for(i=0;i<len;i++)
 		printf("%d      ", ct[i]);
 	printf("\n\n");
 	
