@@ -1,6 +1,6 @@
 # Operating System Lab Programs - JSSSTU (updated)
 
-## All Programs are working (except Round Robin for some test cases)
+## All Programs are working!
 
 OS LAB TEST PROGRAMS
 NOTE: For all the scheduling algorithms write the expected output for the given data (table with set
